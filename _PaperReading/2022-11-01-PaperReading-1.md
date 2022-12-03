@@ -10,7 +10,7 @@ tags:
 
 [paper download](http://starkerfirst.github.io/YangbhPage/files/Dynamic_Neural_Networks_A_Survey.pdf)
 
-<img src="http://starkerfirst.github.io/YangbhPage/images/Dynamic_Neural_Networks_A_Survey_pic2.png" width=80%/>
+[pic2](http://starkerfirst.github.io/YangbhPage/images/Dynamic_Neural_Networks_A_Survey_pic2.png)
 
 ## intro
 
@@ -20,7 +20,7 @@ tags:
 
     动态神经网络可以在推理时分配计算资源，根据输入是否平凡和有用信息区块大小，在不同粒度（layers，channels，sub-networks，spatial areas，temporal location）上丢弃一些多余的信息内容，减少计算。
 
-<img src="http://starkerfirst.github.io/YangbhPage/images/Dynamic_Neural_Networks_A_Survey_pic1.png" width=60% />
+[pic1](http://starkerfirst.github.io/YangbhPage/images/Dynamic_Neural_Networks_A_Survey_pic1.png)
 
 ### representation power
 
