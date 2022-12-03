@@ -178,6 +178,12 @@ kramdown:
 
 # Collections
 collections:
+  PaperReading:
+    output: true
+    permalink: /:collection/:path/
+  ProjectLog:
+    output: true
+    permalink: /:collection/:path/
   teaching:
     output: true
     permalink: /:collection/:path/
