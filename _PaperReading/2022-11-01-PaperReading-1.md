@@ -10,7 +10,7 @@ tags:
 
 [paper download](http://starkerfirst.github.io/YangbhPage/files/Dynamic_Neural_Networks_A_Survey.pdf)
 
-<p><img src='http://starkerfirst.github.io/YangbhPage/images/Dynamic_Neural_Networks_A_Survey_pic2.png' width=80%></p>
+<p><img src="http://starkerfirst.github.io/YangbhPage/images/Dynamic_Neural_Networks_A_Survey_pic2.png" width=80%></p>
 
 ## intro
 
@@ -20,7 +20,7 @@ tags:
 
 ​		动态神经网络可以在推理时分配计算资源，根据输入是否平凡和有用信息区块大小，在不同粒度（layers，channels，sub-networks，spatial areas，temporal location）上丢弃一些多余的信息内容，减少计算。
 
-<p><img src='http://starkerfirst.github.io/YangbhPage/images/Dynamic_Neural_Networks_A_Survey_pic1.png' width=50%></p>
+<p><img src="http://starkerfirst.github.io/YangbhPage/images/Dynamic_Neural_Networks_A_Survey_pic1.png" width=50%></p>
 
 ### representation power
 
@@ -60,5 +60,5 @@ tags:
 
 * hardware platform limitation
 
-    现有的通用计算平台很难在控制流上给出很好的优化性能，比如GPU基于SIMD运行，Spatial accelerator则是Static dataflow，这二位是极其缺乏branching的控制的，所以要么全算完，要么中间插入CPU控制介入。(之后Adyna的工作就是在这个基础上开展的)   此外，还有稀疏性的计算问题，这都不是通用平台能带来的。
+    现有的通用计算平台很难在控制流上给出很好的优化性能，比如GPU基于SIMD运行，Spatial accelerator则是Static dataflow，这二位是极其缺乏branching的控制的，所以要么全算完，要么中间插入CPU控制介入。(之后Adyna的工作就是在这个基础上开展的)   此外，还有稀疏性的计算问题，这都不是通用平台能很好处理的。
 
