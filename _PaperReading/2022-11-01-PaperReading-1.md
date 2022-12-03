@@ -6,7 +6,8 @@ tags:
   - Dynamic Neural Networks
   - Survey
 ---
-### Authors: Yizeng Han, Gao Huang, Shiji Song, Le Yang, Honghui Wang, and Yulin Wang
+ 
+Authors: Yizeng Han, Gao Huang, Shiji Song, Le Yang, Honghui Wang, and Yulin Wang
 
 [paper download](http://starkerfirst.github.io/YangbhPage/files/Dynamic_Neural_Networks_A_Survey.pdf)
 
