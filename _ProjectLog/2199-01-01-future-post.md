@@ -1,11 +1,13 @@
 ---
-title: 'Future Blog Post'
+title: 'Future Project'
 date: 2199-01-01
-permalink: /posts/2012/08/blog-post-4/
+permalink: /posts/2199/01/01/blog-post-4/future_project
 tags:
-  - cool posts
-  - category1
-  - category2
+  - future
 ---
 
-This post will show up by default. To disable scheduling of future posts, edit `config.yml` and set `future: false`. 
+
+* Explore the embedded system (ARMv8)
+* Master a parallel computing tool, especially for CUDA
+* Learn Pytorch usage 
+* Lead a research project about transformer/edge accelerator
