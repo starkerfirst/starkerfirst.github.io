@@ -52,12 +52,10 @@ tags:
 
 * Budgeted prediction
 
-    不是所有应用场景都是可以动态的，一些边缘/移动计算场景要求以稳定速率流水线处理数据，此时latency和computation budget是预定义的，显然动态会给调度带来极大麻烦。
-
+  不是所有应用场景都是可以动态的，一些边缘/移动计算场景要求以稳定速率流水线处理数据，此时latency和computation budget是预定义的，显然动态会给调度带来极大麻烦。
 * Streaming prediction
 
-    想要节省计算，就一定不能batch并发，否则必然每一个分支都需要运行。即使最后可以mask掉结果，但是计算是省不了的。所以要求batch size恒为1，这是对计算资源的浪费。
-
+  想要节省计算，就一定不能batch并发，否则必然每一个分支都需要运行。即使最后可以mask掉结果，但是计算是省不了的。所以要求batch size恒为1，这是对计算资源的浪费。
 * hardware platform limitation
 
   现有的通用计算平台很难在控制流上给出很好的优化性能，比如GPU基于SIMD运行，Spatial accelerator则是Static dataflow，这二位是极其缺乏branching的控制的，所以要么全算完，要么中间插入CPU控制介入。(之后Adyna的工作就是在这个基础上开展的)   此外，还有稀疏性的计算问题，这都不是通用平台能很好处理的。
