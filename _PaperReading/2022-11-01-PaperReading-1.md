@@ -6,10 +6,14 @@ tags:
   - Dynamic Neural Networks
   - Survey
 ---
- 
+
 Authors: Yizeng Han, Gao Huang, Shiji Song, Le Yang, Honghui Wang, and Yulin Wang
 
-[paper download](http://starkerfirst.github.io/YangbhPage/files/Dynamic_Neural_Networks_A_Survey.pdf)
+
+
+Reference: Han Y, Huang G, Song S, et al. Dynamic neural networks: A survey[J]. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2021.
+
+
 
 ![pic2](http://starkerfirst.github.io/YangbhPage/images/Dynamic_Neural_Networks_A_Survey_pic2.png)
 
