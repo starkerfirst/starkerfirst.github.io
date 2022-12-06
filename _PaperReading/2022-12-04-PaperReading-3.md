@@ -8,7 +8,7 @@ tags:
   - tapeout
 ---
 
-authors: Yu-Hsin Chen, Joel Emer and Vivienne Sze  
+Authors: Yu-Hsin Chen, Joel Emer, and Vivienne Sze  
 
 
 
@@ -49,7 +49,7 @@ $O[z][u][x][y]=B[u]+\sum\limits_{k=0}^{C-1}\sum\limits_{i=0}^{R-1}\sum\limits_{j
 
 #### Weight Stationary (WS)
 
-在PE的RF里固定存上weight pixel，使之重复利用$NE^2$次。$R*R$的kernel被map到$R*R$的PE array上，每个ifmap pixel广播到每个阵列，psum在PE间spatial accumulated。
+在PE的RF里固定存上weight pixel，使之重复利用$NE^2$次。$R*R$ 的kernel被map到 $R*R$ 的PE array上，每个ifmap pixel广播到每个阵列，psum在PE间spatial accumulated。
 
 
 
@@ -113,7 +113,9 @@ $O[z][u][x][y]=B[u]+\sum\limits_{k=0}^{C-1}\sum\limits_{i=0}^{R-1}\sum\limits_{j
 
 ## Comment
 
-Eyeriss处理器强调着能效优先的规则，这点与学术派的架构设计有着明显不同侧重（更加注重绝对值）。ISCA版主要是采用分析模型来优化配置，达到最佳能效。JSCC版则是用流片数据来说明。
+总结来说，Eyeriss主要是在细粒度分解（row）和数据重用优化的交叉数据流上的创新，有效解决了intro里提出的问题。
+
+同时，Eyeriss处理器强调着能效优先的规则，这点与学术派的架构设计有着明显不同侧重（更加注重绝对值）。ISCA版主要是采用分析模型来优化配置，达到最佳能效。JSCC版则是用流片数据来说明。
 
 
 
