@@ -23,9 +23,9 @@ Since my freshman year, I have been storing various course materials like PPTs a
 
  [第一章-导论.pdf](https://starkerfirst.github.io/YangbhPage/files/第一章.pdf) 
 
- [第二章-态与算符.pdf](https://starkerfirst.github.io/YangbhPage/files/第二章.pdf)
+ [第二章-形式化理论.pdf](https://starkerfirst.github.io/YangbhPage/files/第二章.pdf)
 
- [第三章-形式化理论.pdf](https://starkerfirst.github.io/YangbhPage/files/第三章.pdf) 
+ [第三章-态与算符.pdf](https://starkerfirst.github.io/YangbhPage/files/第三章.pdf) 
 
  [第四章-表象与表象变换.pdf](https://starkerfirst.github.io/YangbhPage/files/第四章.pdf) 
 
@@ -83,7 +83,7 @@ Since my freshman year, I have been storing various course materials like PPTs a
 
 ## EE Related
 
- [数字集成电路.pdf](https://starkerfirst.github.io/YangbhPage/files/数字集成电路.pdf) 
+ [数字集成电路复习.pdf](https://starkerfirst.github.io/YangbhPage/files/数字集成电路.pdf) 
 
 ### AI computing system
 
