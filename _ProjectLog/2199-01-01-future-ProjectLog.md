@@ -9,5 +9,4 @@ tags:
 Plan to do:
 * Explore the embedded system (ARMv8)
 * Master a parallel computing tool, especially for CUDA
-* Learn Pytorch usage 
 * Lead a research project about transformer/edge accelerator

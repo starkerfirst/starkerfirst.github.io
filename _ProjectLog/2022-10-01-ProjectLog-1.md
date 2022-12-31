@@ -135,7 +135,26 @@ systolic array (4x4) schematic：
 
 ### 物理设计阶段
 
-TBD
+物理设计采用tcl脚本，workflow分为：
+
+* init_design：变量的命名和文件的导入
+* flat_dp：floorplan和电源网松约束			
+* place_opt：布局优化
+* clock_opt_cts：时序优化（时钟树部分）
+* clock_opt_psyn：时序优化（物理部分）
+* clock_opt_route：时序优化（布线部分）
+* route：布线
+* route_opt：布线优化
+* chip_finish：确定初稿
+* metal_fill：填入填充单元，完成设计
+* signoff_drc：signoff前的drc，lvs检查
+* outputs：gds版图生成
+
+目前经过各项脚本参数（IOpad布局，电源网参数）的设置，最新版图已通过drc和lvs检验。
+
+![ICdesign_SA_schematic](http://starkerfirst.github.io/YangbhPage/images/ICdesign_layout.png)
+
+
 
 ## 流片后验证
 
