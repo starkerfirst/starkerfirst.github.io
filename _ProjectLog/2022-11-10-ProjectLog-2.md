@@ -17,13 +17,15 @@ tags:
 
 # Systolic Array Model in Gem5
 
+## Existing Designs
+
 gem5目前大型simobject的开源代码非常少，唯一能找到的比较完整的是gem5-aladdin中的systolic array model，这个模型也是脉动阵列在github上唯一gem5实现，非常具有学习意义。
 
 [harvard-acc/gem5-aladdin: End-to-end SoC simulation: integrating the gem5 system simulator with the Aladdin accelerator simulator. (github.com)](https://github.com/harvard-acc/gem5-aladdin)
 
 唯一问题也是最大问题是代码的doc几乎没有，复杂而难懂。我大概摸索总结出了一个如下的代码框架(/src/systolic_array)
 
-## system
+### system
 * **adyna_connection.h**        functions to invoke adyna
 * **sys_connection.h**          addition functions to support adyna_connection
 * **adyna_params.h**            definitions of params data class
@@ -32,7 +34,7 @@ gem5目前大型simobject的开源代码非常少，唯一能找到的比较完�
 * **SConscript**                scons connection file
 
 
-## microarchitecture
+### microarchitecture
 * **dataflow.h**                a complete picture of the whole SA dataflow
 * **register.h**                model of double buffer, using timebuf.h
 * **pe.h**                      definitions of MAC, PE and IOreg
@@ -40,14 +42,24 @@ gem5目前大型simobject的开源代码非常少，唯一能找到的比较完�
 * **scratchpad.h**              definitions of scratchpads and slaveports
 * **local_spad_interface**      definitions of masterports to spm 
 
-## data
+### data
 * **datatype.h**                describe the definition of pixel data (in MAC)
 * **tensor.h**                  describe the definition of tensor and its params
 
-## Useless yet
+### Useless yet
 * **Gem5Datapath.h**            systematic definition virtual class (including interface and params)
 
+## My Design
 
+必须承认，虽然gem5在精细和准确方面非常优秀，但是学习曲线非常陡峭。目前以我的水平，最佳的搭建路线是通过event queue这一基本驱动器来构建比较简单的模拟器，之后再逐步引入精细部分（比如Mem System，gem5 STL）。
+
+
+
+一个比较折中的办法，就是将SOC的模拟分为两部分，加速器部分的模拟采用自建事件驱动模拟器，用比较固定的参数来模拟访存和数据移动效率。cpu部分的模拟用stl库，包括HBM等模型。两部分模拟分别进行。
+
+
+
+所以，对于Adyna，我们只要规划好event的出现方式和顺序，把initEvent，exitEvent等eventflow设计完整，就可以较好的模拟出真实结果，不需要与原来的gem5 API统一。
 
 Adyna architecture
 ==================
@@ -69,4 +81,4 @@ Adyna的spec正在搭建，相关代码已经开始编写，整体架构图如�
 
 NoC部分采用Garnet Network来建模。
 
-![github repo](http://starkerfirst.github.io/YangbhPage/images/adyna_noc.png)
+![github repo](http://starkerfirst.github.io/YangbhPage/images/adyna_noc.jpg)
