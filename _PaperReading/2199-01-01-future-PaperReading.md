@@ -7,5 +7,6 @@ tags:
 ---
 
 Ready to read:
-* DOTA: Accelerator for transformer
-* Edge Accelerator
+* ViTCoD:  Accelerator for ViT model (HPCA 2023)
+* bisone:   Accelerator for edge computing (ASPLOS 2022)
+* fingers:   Accelerator for GNN (ASPLOS 2022)

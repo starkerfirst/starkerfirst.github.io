@@ -30,7 +30,7 @@ Reference2: *Yu-Hsin Chen, Joel Emer, and Vivienne Sze. 2016. Eyeriss: a spatial
 
 本文的novelty:
 
-* 相较于之前只能针对某一种类数据移动优化的数据流，它尝试**对所有数据移动类型同时优化**
+* 相较于之前只能针对某一种类数据移动优化的数据流，它尝试**对所有数据移动类型同时优化**，提出了RS数据流
 * 提出一种量化分析框架，比较不同数据流
 
 ## Dataflow Analyze
@@ -55,7 +55,7 @@ $O[z][u][x][y]=B[u]+\sum\limits_{k=0}^{C-1}\sum\limits_{i=0}^{R-1}\sum\limits_{j
 
 这种方法挖掘了weight reuse，ifmap reuse，convolutional reuse。（这种方法缺点可能在于ofmap都算了，但是都没算完，psum整出来一堆需要缓存）
 
-#### Output Stationary (WS)
+#### Output Stationary (OS)
 
 在PE的RF里固定存上psum，同一时间只取4D ofmap的一个子区域计算，直到算完为止（这就是集中力量办大事，不至于psum过多）。
 
