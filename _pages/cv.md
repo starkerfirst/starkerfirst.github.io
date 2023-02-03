@@ -9,8 +9,11 @@ redirect_from:
 
 My resume is listed below, including **Chinese, Europass, and US** formats. 
 
-[Chinese Version](null)
+US version is the most complete type. 
 
-[Europass Version](null)
+[US Version](https://starkerfirst.github.io/YangbhPage/files/CV_US.pdf)
 
-[US Version](null)
+[Chinese Version](https://starkerfirst.github.io/YangbhPage/files/CV_cn.pdf)
+
+[Europass Version](https://starkerfirst.github.io/YangbhPage/files/CV_europass.pdf)
+
