@@ -16,7 +16,7 @@ Currently, I am working as a research intern under the supervision of Prof. Ming
 
 Also, I am doing my digital chip design and tape-out in TSMC 180nm process. If interested, you can find the details of this project in my repo.
 
-As a junior, now I am pursuing a Ph.D. position in computer architecture or AI chip design.
+As a junior, now I am seeking a Ph.D. position in computer architecture or AI chip design.
 
 Welcome to contact me!
 
