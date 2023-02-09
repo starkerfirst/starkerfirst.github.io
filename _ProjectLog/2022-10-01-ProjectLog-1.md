@@ -154,7 +154,11 @@ systolic array (4x4) schematic：
 
 ![ICdesign_SA_schematic](http://starkerfirst.github.io/YangbhPage/images/ICdesign_layout.png)
 
+## release阶段
 
+icc gds生成后，需要在cadence virtuoso上完成bonding pad和guard ring的手工版图添加，并在mentor calibre上进行DRC, ant, LVS验证，全部通过后即可递交foundry。
+
+![ICdesign_release](http://starkerfirst.github.io/YangbhPage/images/ICdesign_release.png)
 
 ## 流片后验证
 
