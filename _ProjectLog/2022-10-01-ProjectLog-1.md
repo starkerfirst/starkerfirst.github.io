@@ -160,6 +160,16 @@ icc gds生成后，需要在cadence virtuoso上完成bonding pad和guard ring的
 
 ![ICdesign_release](http://starkerfirst.github.io/YangbhPage/images/ICdesign_release.png)
 
+![ICdesign_release2](http://starkerfirst.github.io/YangbhPage/images/ICdesign_release2.png)
+
+pad:
+
+![ICdesign_release2](http://starkerfirst.github.io/YangbhPage/images/ICdesign_pad.png)
+
+inside:
+
+![ICdesign_release2](http://starkerfirst.github.io/YangbhPage/images/ICdesign_inside.png)
+
 ## 流片后验证
 
 TBD
