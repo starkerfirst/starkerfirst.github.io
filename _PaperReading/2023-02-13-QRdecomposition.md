@@ -36,7 +36,7 @@ QR分解在边缘计算, 数据压缩, 降维, 还有特征值计算等方面有
 
 ![dataflow1](https://starkerfirst.github.io/YangbhPage/images/QR_dataflow1.png)
 
-可以发现分解算法由两个基本操作组成：*Normal QR*和*Dual-triangular QR (DTQR)*。普通QR已经被很深入的研究过  ，但是DTQR却没有怎么利用他的双三角结构，而是直接用普通QR代替。这一篇文章则是针对这方面做出了优化。
+可以发现分解算法由两个基本操作组成：*Normal QR*和*Dual-triangular QR (DTQR)*。普通QR已经被很深入的研究过  ，但是DTQR却没有怎么利用他的双三角结构，而是直接用普通QR代替。这一篇文章则是针对这方面做出了优化，采用并行Givens变换来加速计算（Householder是串行算法，是对整个矩阵运行，而Givens一次只计算两行，可以大量并行）。
 
 
 
@@ -50,23 +50,25 @@ PS: 还有的文章[1]则是在任务级做出优化，将上面的数据流并�
 
 # Algorithm
 
-DTQR算法是将$\R^{m*n}$分解成$Q\in\R^{m*m},R\in\R^{m*n}$，可以总结如下图。
+DTQR算法是将 $\R^{m,n}$ 分解成 $Q\in\R^{m,m}$,$R\in\R^{m,n}$，实质上是把下半 $L$ 给变换约去，然后取 $R$ 的上半部分为新的 $R$  ，下图是一个示例。
 
 ![algorithm](https://starkerfirst.github.io/YangbhPage/images/QR_algorithm.png)
 
-Round0时三行并行Givens运算（givens只改变一行数据），并将L矩阵对角元消除。Round1则两行并行Givens，继续消除L矩阵次对角元。这样形成了逐次远离对角线消元的pipeline顺序，而非Gaussian消元只处理一列。具体算法如下图。
+Round0时三行并行Givens运算（givens只改变一行数据），并将L矩阵对角元消除。Round1则两行并行Givens，继续消除L矩阵次对角元。这样形成了逐次远离对角线消元的pipeline顺序，而非Gaussian消元只处理一列。文献[2]提供了HLS如下图的算法（第13行有一定错误，下标少了+n）。
 
 ![algorithm2](https://starkerfirst.github.io/YangbhPage/images/QR_algorithm2.png)
 
+我们定性分析一下性能瓶颈。对于一个大矩阵来说，数据准备绝对是一个瓶颈，如果我们需要等待所有数据完毕，那么将浪费大量时间闲置，所以采用脉动阵列可以有效缓解这个问题。下面的问题是如何布置这个脉动阵列。从上面的算法可以看出，Q和R计算共用了对角元的数据，故可以放在同一列。又因为我们相当于有三个相关任务：计算旋转参数、R计算、Q计算，那么我们都可以在同一列里完成处理。横向则作为每一行的流水运行。
+
 # Acceleration Strategy
 
-在[2]的实验部分，作者分析了性能瓶颈，发现Q矩阵计算成为了新的瓶颈，并且随着矩阵增大而升高。于是，本文则针对Q矩阵的结构设计了新的数据流，提出了*Global Acceleration Schemes (GS)*和*Partially Rotation Skipping (QS)*。
+在[2]的实验部分，作者分析了性能，发现Q矩阵计算成为了新的瓶颈，并且随着矩阵增大而升高。于是，本文则针对Q矩阵的结构设计了新的数据流，提出了*Global Acceleration Schemes (GS)*和*Partially Rotation Skipping (QS)*。
 
 
 
-GS与文章[2]相同，不做赘述。
+GS与文章[2]相同，是上图的优化，将一些没有依赖的行计算并行化。
 
-QS是发现Q矩阵的稀疏性，只需要将非零元素作为Q的存储内容即可。此时在下一个round需要取一列数据的时候，则在这一列没有记录的位置上补上0。如下图，我们需要更新Q矩阵的第二列和第四列，但是我们实际上只存储了四个红色的位置，为了数据排列和处理的统一性，我们补上了蓝色的0，保证两列数据输入时是完整的。同时，我们还可以重用数据到下个round。经过QS的优化，时间复杂度从普通矩阵乘的$O(n^2)$降到了$O(n)$。
+QS是发现Q矩阵的稀疏性，只需要将非零元素作为Q的存储内容即可。此时在下一个round需要取一列数据的时候，则在这一列没有记录的位置上补上0。如下图，我们需要更新Q矩阵的第二列和第四列，但是我们实际上只存储了四个红色的位置，为了数据排列和处理的统一性，我们补上了蓝色的0，保证两列数据输入时是完整的。同时，我们还可以重用数据到下个round。经过QS的优化，Q旋转矩阵的时间复杂度从普通矩阵乘的$O(n^2)$降到了$O(n)$。（下图Round 0 有点错误，右边蓝框应该右移一列）
 
 ![QS](https://starkerfirst.github.io/YangbhPage/images/QR_QS.png)
 
@@ -78,13 +80,13 @@ QS是发现Q矩阵的稀疏性，只需要将非零元素作为Q的存储内容�
 
 # Implementation
 
-文章[2]的架构实现如下图。
+文章[2]的baseline架构实现如下图。
 
 ![arch](https://starkerfirst.github.io/YangbhPage/images/QR_arch2.png)
 
-**Step1：DMA from DRAM to on-chip BRAM  & Data Preprocessing **	
+**Step1：DMA from DRAM to on-chip BRAM  & Data Preprocessing**	
 
-数据预处理指把对角元数据存在相邻空间中，非对角元数据也可以按所取顺序排列。
+数据预处理指把对角元数据存在相邻空间中，非对角元数据也可以按所取顺序排列。图中有一个FIFO queue，是指不需要等全部数据都取完就可以开始，后面的数据按顺序进入即可，因为脉动阵列允许异步数据存取。
 
 **Step2：Parallel Rotation Parameter Generation & Pipeline Rotation**
 
@@ -96,7 +98,7 @@ QS是发现Q矩阵的稀疏性，只需要将非零元素作为Q的存储内容�
 
 **Step4: Collect**
 
-
+Q collector和R collector作为数据收集器，将矩阵排列好放回Memory，或者继续前递给下一个任务。
 
 在本文中，作者优化了计算部分，改用了1D和2D混合阵列，如下图。
 
@@ -112,6 +114,7 @@ QS是发现Q矩阵的稀疏性，只需要将非零元素作为Q的存储内容�
 
 1. Q的旋转对的指标是不断趋近中心，是否能预取或者重用？
 2. 三角PE阵列是否可以优化？
+2. R计算时可以并行而不是pipeline吗？
 
 
 

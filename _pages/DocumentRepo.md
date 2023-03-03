@@ -33,6 +33,10 @@ Since my freshman year, I have been storing various course materials like PPTs a
 
  [第六章-波函数.pdf](https://starkerfirst.github.io/YangbhPage/files/第六章.pdf) 
 
+ [第七章-角动量与自旋.pdf](https://starkerfirst.github.io/YangbhPage/files/第七章.pdf) 
+
+ [第八章-近似方法.pdf](https://starkerfirst.github.io/YangbhPage/files/第八章.pdf) 
+
 ### College Physics Experiment
 
  [重力加速度的测量.pdf](https://starkerfirst.github.io/YangbhPage/files/重力加速度的测量.pdf) 
