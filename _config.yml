@@ -11,9 +11,9 @@ title                    : "YangbhPage"
 title_separator          : "-"
 name                     : &name "Bohan Yang"
 description              : &description "personal website"
-url                      : https://starkerfirst.github.io/YangbhPage # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://starkerfirst.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "starkefirst/YangbhPage"
+repository               : "starkefirst/starkerfirst.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
