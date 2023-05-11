@@ -85,39 +85,11 @@ Since my freshman year, I have been storing various course materials like PPTs a
 
  [迈克尔逊干涉仪平台.docx](https://starkerfirst.github.io/YangbhPage/files/迈克尔逊干涉仪平台.docx) 
 
-## EE Related
 
- [数字集成电路复习.pdf](https://starkerfirst.github.io/YangbhPage/files/数字集成电路.pdf) 
 
-### AI computing system
+## EECS Related
 
- [第二章-神经网络基础.pdf](https://starkerfirst.github.io/YangbhPage/files/第二章-神经网络基础.pdf) 
-
- [第三章-深度学习.pdf](https://starkerfirst.github.io/YangbhPage/files/第三章-深度学习.pdf) 
-
- [第四章-编程框架使用.pdf](https://starkerfirst.github.io/YangbhPage/files/第四章-编程框架使用.pdf) 
-
- [第五章-编程框架机理.pdf](https://starkerfirst.github.io/YangbhPage/files/第五章-编程框架机理.pdf) 
-
- [第六章-深度学习处理器原理.pdf](https://starkerfirst.github.io/YangbhPage/files/第六章-深度学习处理器原理.pdf) 
-
- [第七章-深度学习处理器架构.pdf](https://starkerfirst.github.io/YangbhPage/files/第七章-深度学习处理器架构.pdf) 
-
- [第八章-智能编程语言.pdf](https://starkerfirst.github.io/YangbhPage/files/第八章-智能编程语言.pdf) 
-
- [深度学习处理器实验手册.pdf](https://starkerfirst.github.io/YangbhPage/files/深度学习处理器实验手册.pdf) 
-
- [深度学习基础实验手册.pdf](https://starkerfirst.github.io/YangbhPage/files/深度学习基础实验手册.pdf) 
-
- [神经网络实验手册.pdf](https://starkerfirst.github.io/YangbhPage/files/神经网络实验手册.pdf) 
-
- [yolov3综合实验.pdf](https://starkerfirst.github.io/YangbhPage/files/yolov3综合实验.pdf) 
-
- [编程框架实验手册.pdf](https://starkerfirst.github.io/YangbhPage/files/编程框架实验手册.pdf) 
-
- [智能编程语言.pdf](https://starkerfirst.github.io/YangbhPage/files/智能编程语言.pdf) 
-
-## CS Related
+[数字集成电路复习.pdf](https://starkerfirst.github.io/YangbhPage/files/数字集成电路.pdf) 
 
 ### Introduction to FPGA development
 
