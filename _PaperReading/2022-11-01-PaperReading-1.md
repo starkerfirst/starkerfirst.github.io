@@ -15,7 +15,7 @@ Reference: Han Y, Huang G, Song S, et al. Dynamic neural networks: A survey[J]. 
 
 
 
-![pic2](http://starkerfirst.github.io/YangbhPage/images/Dynamic_Neural_Networks_A_Survey_pic2.png)
+![pic2](http://starkerfirst.github.io/images/Dynamic_Neural_Networks_A_Survey_pic2.png)
 
 ## intro
 
@@ -25,7 +25,7 @@ Reference: Han Y, Huang G, Song S, et al. Dynamic neural networks: A survey[J]. 
 
 动态神经网络可以在推理时分配计算资源，根据输入是否平凡和有用信息区块大小，在不同粒度（layers，channels，sub-networks，spatial areas，temporal location）上丢弃一些多余的信息内容，减少计算。
 
-![pic1](http://starkerfirst.github.io/YangbhPage/images/Dynamic_Neural_Networks_A_Survey_pic1.png)
+![pic1](http://starkerfirst.github.io/images/Dynamic_Neural_Networks_A_Survey_pic1.png)
 
 ### representation power
 

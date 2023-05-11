@@ -34,7 +34,7 @@ QR分解在边缘计算, 数据压缩, 降维, 还有特征值计算等方面有
 
 但是，如果直接强行做整个Householder或Givens变换，会在边缘平台（FPGA）上带来很大的计算和存储负担，并且也不能很好的并行化，存在大量的同步开销。很自然的，对待这样一个行列数不成正比的矩阵，我们有这样一个最初的并行工作流（communication avoiding QR, CAQR）：先将m分成多个n，然后一一分解，最后再组合起来，此时Q并不是显式表示的，而是由一系列矩阵之积表示。
 
-![dataflow1](https://starkerfirst.github.io/YangbhPage/images/QR_dataflow1.png)
+![dataflow1](https://starkerfirst.github.io/images/QR_dataflow1.png)
 
 可以发现分解算法由两个基本操作组成：*Normal QR*和*Dual-triangular QR (DTQR)*。普通QR已经被很深入的研究过  ，但是DTQR却没有怎么利用他的双三角结构，而是直接用普通QR代替。这一篇文章则是针对这方面做出了优化，采用并行Givens变换来加速计算（Householder是串行算法，是对整个矩阵运行，而Givens一次只计算两行，可以大量并行）。
 
@@ -42,21 +42,21 @@ QR分解在边缘计算, 数据压缩, 降维, 还有特征值计算等方面有
 
 PS: 还有的文章[1]则是在任务级做出优化，将上面的数据流并行化，在MapReduce上计算。它实现了mapper（串行块），reducer（多个并行的串行块的缩并），scheduler（根据不同串行块情况分配缩并组）
 
-![mapper](https://starkerfirst.github.io/YangbhPage/images/QR_mapper.png)
+![mapper](https://starkerfirst.github.io/images/QR_mapper.png)
 
-![reducer](https://starkerfirst.github.io/YangbhPage/images/QR_reducer.png)
+![reducer](https://starkerfirst.github.io/images/QR_reducer.png)
 
-![dataflow2](https://starkerfirst.github.io/YangbhPage/images/QR_dataflow2.png)
+![dataflow2](https://starkerfirst.github.io/images/QR_dataflow2.png)
 
 # Algorithm
 
 DTQR算法是将 $\R^{m,n}$ 分解成 $Q\in\R^{m,m}$,$R\in\R^{m,n}$，实质上是把下半 $L$ 给变换约去，然后取 $R$ 的上半部分为新的 $R$  ，下图是一个示例。
 
-![algorithm](https://starkerfirst.github.io/YangbhPage/images/QR_algorithm.png)
+![algorithm](https://starkerfirst.github.io/images/QR_algorithm.png)
 
 Round0时三行并行Givens运算（givens只改变一行数据），并将L矩阵对角元消除。Round1则两行并行Givens，继续消除L矩阵次对角元。这样形成了逐次远离对角线消元的pipeline顺序，而非Gaussian消元只处理一列。文献[2]提供了HLS如下图的算法（第13行有一定错误，下标少了+n）。
 
-![algorithm2](https://starkerfirst.github.io/YangbhPage/images/QR_algorithm2.png)
+![algorithm2](https://starkerfirst.github.io/images/QR_algorithm2.png)
 
 我们定性分析一下性能瓶颈。对于一个大矩阵来说，数据准备绝对是一个瓶颈，如果我们需要等待所有数据完毕，那么将浪费大量时间闲置，所以采用脉动阵列可以有效缓解这个问题。下面的问题是如何布置这个脉动阵列。从上面的算法可以看出，Q和R计算共用了对角元的数据，故可以放在同一列。又因为我们相当于有三个相关任务：计算旋转参数、R计算、Q计算，那么我们都可以在同一列里完成处理。横向则作为每一行的流水运行。
 
@@ -70,7 +70,7 @@ GS与文章[2]相同，是上图的优化，将一些没有依赖的行计算并
 
 QS是发现Q矩阵的稀疏性，只需要将非零元素作为Q的存储内容即可。此时在下一个round需要取一列数据的时候，则在这一列没有记录的位置上补上0。如下图，我们需要更新Q矩阵的第二列和第四列，但是我们实际上只存储了四个红色的位置，为了数据排列和处理的统一性，我们补上了蓝色的0，保证两列数据输入时是完整的。同时，我们还可以重用数据到下个round。经过QS的优化，Q旋转矩阵的时间复杂度从普通矩阵乘的$O(n^2)$降到了$O(n)$。（下图Round 0 有点错误，右边蓝框应该右移一列）
 
-![QS](https://starkerfirst.github.io/YangbhPage/images/QR_QS.png)
+![QS](https://starkerfirst.github.io/images/QR_QS.png)
 
 我们还发现，Q的旋转对的指标是不断趋近中心的，不过本文并没有在这方面优化存储。
 
@@ -82,7 +82,7 @@ QS是发现Q矩阵的稀疏性，只需要将非零元素作为Q的存储内容�
 
 文章[2]的baseline架构实现如下图。
 
-![arch](https://starkerfirst.github.io/YangbhPage/images/QR_arch2.png)
+![arch](https://starkerfirst.github.io/images/QR_arch2.png)
 
 **Step1：DMA from DRAM to on-chip BRAM  & Data Preprocessing**	
 
@@ -102,7 +102,7 @@ Q collector和R collector作为数据收集器，将矩阵排列好放回Memory�
 
 在本文中，作者优化了计算部分，改用了1D和2D混合阵列，如下图。
 
-![arch2](https://starkerfirst.github.io/YangbhPage/images/QR_arch.png)
+![arch2](https://starkerfirst.github.io/images/QR_arch.png)
 
 原本的1dPE是需要同时计算旋转参数生成和旋转的，现在将两种功能分离成PE1和PE2，现在PE2可以在没有算出旋转参数之前拿到数据，一旦PE1完成计算就立刻开始，这样一种分离设计减少了闲置的时间，也减少了广播的程度。同时，阵列设计成了统一的三角布置，与R的三角结构对应。（不过感觉1d的阵列里也是这样设计的，或者是更细粒度的pipeline）
 

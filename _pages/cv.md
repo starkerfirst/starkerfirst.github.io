@@ -11,9 +11,9 @@ My resume is listed below, including **Chinese, Europass, and US** formats.
 
 US version is the most complete type. 
 
-[US Version](https://starkerfirst.github.io/YangbhPage/files/CV_US.pdf)
+[US Version](https://starkerfirst.github.io/files/CV_US.pdf)
 
-[Chinese Version](https://starkerfirst.github.io/YangbhPage/files/CV_cn.pdf)
+[Chinese Version](https://starkerfirst.github.io/files/CV_cn.pdf)
 
-[Europass Version](https://starkerfirst.github.io/YangbhPage/files/CV_europass.pdf)
+[Europass Version](https://starkerfirst.github.io/files/CV_europass.pdf)
 

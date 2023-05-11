@@ -117,21 +117,21 @@ I = {
 		117 120 123 126
 	}
 
-![ICdesign_systolic_array_sim_without_control](http://starkerfirst.github.io/YangbhPage/images/ICdesign_systolic_array_sim_without_control.png)
+![ICdesign_systolic_array_sim_without_control](http://starkerfirst.github.io/images/ICdesign_systolic_array_sim_without_control.png)
 
 有FSM controller仿真：
 
-![ICdesign_systolic_array_sim_withctl1](http://starkerfirst.github.io/YangbhPage/images/ICdesign_systolic_array_sim_withctl1.png)
+![ICdesign_systolic_array_sim_withctl1](http://starkerfirst.github.io/images/ICdesign_systolic_array_sim_withctl1.png)
 
-![ICdesign_systolic_array_sim_withctl2](http://starkerfirst.github.io/YangbhPage/images/ICdesign_systolic_array_sim_withctl2.png)
+![ICdesign_systolic_array_sim_withctl2](http://starkerfirst.github.io/images/ICdesign_systolic_array_sim_withctl2.png)
 
-![ICdesign_systolic_array_sim_withctl3](http://starkerfirst.github.io/YangbhPage/images/ICdesign_systolic_array_sim_withctl3.png)
+![ICdesign_systolic_array_sim_withctl3](http://starkerfirst.github.io/images/ICdesign_systolic_array_sim_withctl3.png)
 
 ### 综合阶段
 
 systolic array (4x4) schematic：
 
-![ICdesign_SA_schematic](http://starkerfirst.github.io/YangbhPage/images/ICdesign_SA_schematic.png)
+![ICdesign_SA_schematic](http://starkerfirst.github.io/images/ICdesign_SA_schematic.png)
 
 ### 物理设计阶段
 
@@ -152,23 +152,23 @@ systolic array (4x4) schematic：
 
 目前经过各项脚本参数（IOpad布局，电源网参数）的设置，最新版图已通过drc和lvs检验。
 
-![ICdesign_SA_schematic](http://starkerfirst.github.io/YangbhPage/images/ICdesign_layout.png)
+![ICdesign_SA_schematic](http://starkerfirst.github.io/images/ICdesign_layout.png)
 
 ## release阶段
 
 icc gds生成后，需要在cadence virtuoso上完成bonding pad和guard ring的手工版图添加，并在mentor calibre上进行DRC, ant, LVS验证，全部通过后即可递交foundry。
 
-![ICdesign_release](http://starkerfirst.github.io/YangbhPage/images/ICdesign_release.png)
+![ICdesign_release](http://starkerfirst.github.io/images/ICdesign_release.png)
 
-![ICdesign_release2](http://starkerfirst.github.io/YangbhPage/images/ICdesign_release2.png)
+![ICdesign_release2](http://starkerfirst.github.io/images/ICdesign_release2.png)
 
 pad:
 
-![ICdesign_release2](http://starkerfirst.github.io/YangbhPage/images/ICdesign_pad.png)
+![ICdesign_release2](http://starkerfirst.github.io/images/ICdesign_pad.png)
 
 inside:
 
-![ICdesign_release2](http://starkerfirst.github.io/YangbhPage/images/ICdesign_inside.png)
+![ICdesign_release2](http://starkerfirst.github.io/images/ICdesign_inside.png)
 
 ## 流片后验证
 

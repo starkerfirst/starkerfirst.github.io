@@ -65,13 +65,13 @@ Adyna architecture
 ==================
 Adyna的spec正在搭建，相关代码已经开始编写，整体架构图如下：
 
-![github repo](http://starkerfirst.github.io/YangbhPage/images/adyna_schematic.png)
+![github repo](http://starkerfirst.github.io/images/adyna_schematic.png)
 
 ## Acc
 
 加速器部分采用systolic_array的方式，不过会简化接口加强建模，大概的框架如下图。
 
-![github repo](http://starkerfirst.github.io/YangbhPage/images/adyna_acc.png)
+![github repo](http://starkerfirst.github.io/images/adyna_acc.png)
 
 ## NSR
 
@@ -81,17 +81,17 @@ Adyna的spec正在搭建，相关代码已经开始编写，整体架构图如�
 
 SPM端口采用gem5 memory system的统一API来实现，这使得之后连接crossbar总线和DRAM模型成为可能。
 
-![github repo](http://starkerfirst.github.io/YangbhPage/images/adyna_master_slave1.png)
+![github repo](http://starkerfirst.github.io/images/adyna_master_slave1.png)
 
-![github repo](http://starkerfirst.github.io/YangbhPage/images/adyna_master_slave2.png)
+![github repo](http://starkerfirst.github.io/images/adyna_master_slave2.png)
 
-![github repo](http://starkerfirst.github.io/YangbhPage/images/adyna_master_slave3.png)
+![github repo](http://starkerfirst.github.io/images/adyna_master_slave3.png)
 
 ## NoC
 
 NoC部分采用Garnet Network来建模。
 
-![github repo](http://starkerfirst.github.io/YangbhPage/images/adyna_noc.jpg)
+![github repo](http://starkerfirst.github.io/images/adyna_noc.jpg)
 
 
 

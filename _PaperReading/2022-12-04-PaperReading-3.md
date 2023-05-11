@@ -83,7 +83,7 @@ $O[z][u][x][y]=B[u]+\sum\limits_{k=0}^{C-1}\sum\limits_{i=0}^{R-1}\sum\limits_{j
 
 作者提出使将高维的卷积运算分解成很多个1D Conv原语，每个原语计算one row of filter weights and one row of ifmap pixels, and generates one row of psums ，psum会暂存并在后面逐步加和。 
 
-![pic2](http://starkerfirst.github.io/YangbhPage/images/eyeriss_pic2.png)
+![pic2](http://starkerfirst.github.io/images/eyeriss_pic2.png)
 
 每个原语映射到一个PE，所以是Row Stationary，但是仍需要优化，因为显然同时映射所有原语是不可能的。
 
@@ -101,7 +101,7 @@ $O[z][u][x][y]=B[u]+\sum\limits_{k=0}^{C-1}\sum\limits_{i=0}^{R-1}\sum\limits_{j
 
 根据Global buffer的大小 ，可以继续折叠 processing pass。	
 
-![pic3](http://starkerfirst.github.io/YangbhPage/images/eyeriss_pic3.png)
+![pic3](http://starkerfirst.github.io/images/eyeriss_pic3.png)
 
 
 
@@ -109,7 +109,7 @@ $O[z][u][x][y]=B[u]+\sum\limits_{k=0}^{C-1}\sum\limits_{i=0}^{R-1}\sum\limits_{j
 
 为了完成不同层级的数据重用，Eyeriss采用四级storage hier: **DRAM，global buffer，array (inter-PE communication)，RF**，分别挖掘不同的重用性。
 
-![pic1](http://starkerfirst.github.io/YangbhPage/images/eyeriss_pic1.png)
+![pic1](http://starkerfirst.github.io/images/eyeriss_pic1.png)
 
 ## Comment
 
