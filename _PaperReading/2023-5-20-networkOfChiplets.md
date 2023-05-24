@@ -189,21 +189,56 @@ interleaving带来的乱序问题本文没有解决，不过可以参考TCP/IP�
 
 # Evaluation & Conclusion
 
-作者写了一个C++模拟器，并且以**Duato’s protocol** based adaptive negative-first routing (NFR) on 2D-mesh为baseline，展现本文的方法效果。
+作者写了一个C++模拟器，并且以**Duato’s protocol** based adaptive negative-first routing (NFR) on 2D-mesh为baseline，本质上就是不采用本文的core/IF-label method，而是直接当做一体网络（显然baseline没有对chiplet做特定优化），展现本文的方法效果。
 
 这里介绍一下流量矩阵traffic matrix的概念，简单来说就是把N*N-1个节点对的各自独立流量形成的列向量映射到L个实际link的流量上，显然一个entry代表一个节点对对这个link的流量贡献。
 
-作者在四个pattern上比较：uniform(random), uniform-hotspot(10% active), permutation(4 specific patterns)，topo选择2D-mesh(baseline), 3D-mesh, hypercube
+* task1: 作者在四个pattern上比较：uniform(random), uniform-hotspot(10% active), permutation(4 specific patterns)，topo选择2D-mesh(baseline), 3D-mesh, hypercube
 
 ![pic15](https://starkerfirst.github.io/images/network_of_chiplets_patterns.png)
 
-可以看到无论是饱和注入率还是延时都是优于baseline的。
+可以看到无论是饱和注入率还是延时都是优于baseline的，具有很高的适应性。
 
+* task2: scalability
 
+![pic16](https://starkerfirst.github.io/images/network_of_chiplets_scale.png)
 
-当然，某些架构不能接受一些映射，或者人工通过直觉限制了一些参数，或者在探索过程中发现了一些不合理的空间，就会裁剪掉一部分。
+可以发现，增大NoC大小，会使得intra-chiplet的占比增加，从而增大延时并减小饱和度。增大chiplets数目，方法效果逐渐拉开优势，并且scale对其的影响很小。
+
+* task3：energy
+
+![pic17](https://starkerfirst.github.io/images/network_of_chiplets_energy.png)
+
+作者分析，正是因为采用了high-radix的设计，减少了intra-chiplet和inter-chiplet的hop counts，从而减小能耗。
+
+* task4: C2Clink bandwidth
+
+![pic18](https://starkerfirst.github.io/images/network_of_chiplets_bw.png)
+
+hypercube始终保持两倍的饱和注入率和一半的延迟。但是如果link的带宽太高，high-radix带来的优势会逐渐减少，因为此时的瓶颈变成了intra-chiplet link。
+
+* task5: C2Clink latency & buffersize
+
+![pic19](https://starkerfirst.github.io/images/network_of_chiplets_latency.png)
+
+buffersize对性能影响很小。下面的红线代表hypercube-15cycles，仍然比2D-mesh-5cycles好。
+
+* task6: interleaving
+
+![pic20](https://starkerfirst.github.io/images/network_of_chiplets_nointerleaving.png)
+
+带宽越受限，效果越好（利用率成为瓶颈）。
 
 
 
 # Comment
+
+读完文章，我对其性能提升并不意外，因为high-radix topo确实能带来好处，之前NoC不采用是因为实现问题。我还有一些疑问：
+
+* 高bw时候性能反而不好，是否说明intra-chiplet routing algo不好？如果是，是否是为了支持high-radix设计（确实绕了远路）？能否避免？
+
+* 是不是应该在2D-mesh上用本文的routing algo来比较一下效果，因为完全可以认为是hypercube和nD-mesh的优越性而不是路由算法好？
+* 之前有无采用high-radix topo的文章？
+* 之前的chiplet2chiplet设计是怎么办的？
+* routing algo为什么不是很行？是因为在避免死锁吗？
 
