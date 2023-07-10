@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome to my website!"
+title: "Bohan Yang (杨博涵)"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,17 +8,29 @@ redirect_from:
   - /about.html
 ---
 
-Hi! My name is Bohan Yang, a junior undergraduate at the School of the Gifted Young, USTC. 
+### Senior Undergraduate
 
-I am interested in Computer Architecture and Chip Design, especially for domain-specific accelerators of various neural networks and in different application scenarios like LLM, self-driving and edge computing.
+*School of the Gifted Young, University of Science and Technology of China (USTC)*
 
-Currently, I am working as a research intern under the supervision of Prof. Mingyu Gao at IIIS, Tsinghua University to explore design space and construct a evaluation simulator for the dynamic neural networks using hardware and software co-design.
+I am a senior undergraduate majoring in physical electronics. Now I am pursuing a B.S. degree in applied physics from USTC. My interests lie in **Computer Architecture and Chip Design**, especially for domain-specific accelerators of DNN workloads and in different application scenarios like LLM and self-driving.
+
+Currently, I am working as a research intern under the supervision of Prof. Mingyu Gao at IIIS, Tsinghua University to explore design space and construct an evaluation simulator for dynamic neural networks using hardware and software co-design.
 
 Also, I am designing my own digital chip in TSMC 180nm process. If interested, you can find the details of this project in my repo.
 
-As a junior, now I am applying for a Ph.D. position in computer architecture and AI chip design.
-
 Welcome to my website!
+
+# News
+
+* My Next Stop -->  **HKUST**
+
+# Contact 
+
+* Email: yangbh [at] mail [dot] ustc [dot] edu [dot] cn
+* Address: University of Science and Technology of China,
+    No.96, JinZhai Road Baohe District, Hefei, Anhui, 230026, P.R.China.
+
+
 
 
 

@@ -5,9 +5,7 @@ permalink: /DocumentRepo/
 author_profile: true
 ---
 
-Since my freshman year, I have been storing various course materials like PPTs and notes. All useful files are listed below, from physics to computer science.
-
-## Physics Related
+## Undergraduate Courses Files
 
  [原子物理复习.pdf](https://starkerfirst.github.io/files/原子物理复习.pdf) 
 
@@ -18,6 +16,22 @@ Since my freshman year, I have been storing various course materials like PPTs a
  [电磁学小论文.zip](https://starkerfirst.github.io/files/电磁学小论文.zip) 
 
  [代数结构 edition Ⅲ.pdf](https://starkerfirst.github.io/files/代数结构 edition Ⅲ.pdf) 
+
+ [数字集成电路复习.pdf](https://starkerfirst.github.io/files/数字集成电路.pdf) 
+
+ [演讲文案.docx](https://starkerfirst.github.io/files/演讲文案.docx) 
+
+ [英语演讲.pptx](https://starkerfirst.github.io/files/英语演讲.pptx) 
+
+ [少年班学生话科大生活稿件.docx](https://starkerfirst.github.io/files/少年班学生话科大生活稿件.docx) 
+
+ [形式与政策感想.pdf](https://starkerfirst.github.io/files/形式与政策感想.pdf) 
+
+ [科学与社会研讨课终期报告.pptx](https://starkerfirst.github.io/files/科学与社会研讨课终期报告.pptx) 
+
+ [C语言笔记Part1.docx](https://starkerfirst.github.io/files/C语言笔记Part1.docx) 
+
+ [C语言笔记Part2.docx](https://starkerfirst.github.io/files/C语言笔记Part2.docx) 
 
 ### Quantum Mechanics
 
@@ -71,7 +85,7 @@ Since my freshman year, I have been storing various course materials like PPTs a
 
  [微波光学实验报告.pdf](https://starkerfirst.github.io/files/微波光学实验报告.pdf) 
 
-### Experiment Project
+ [五级大雾.zip](https://starkerfirst.github.io/files/五级大雾.zip) 
 
  [迈氏干涉仪平台.pptx](https://starkerfirst.github.io/files/迈氏干涉仪平台.pptx) 
 
@@ -84,12 +98,6 @@ Since my freshman year, I have been storing various course materials like PPTs a
  [基于FPGA的温度测试系统设计.pptx](https://starkerfirst.github.io/files/基于FPGA的温度测试系统设计.pptx) 
 
  [迈克尔逊干涉仪平台.docx](https://starkerfirst.github.io/files/迈克尔逊干涉仪平台.docx) 
-
-
-
-## EECS Related
-
-[数字集成电路复习.pdf](https://starkerfirst.github.io/files/数字集成电路.pdf) 
 
 ### Introduction to FPGA development
 
@@ -137,18 +145,3 @@ Since my freshman year, I have been storing various course materials like PPTs a
 
  [matlab第七讲.pdf](https://starkerfirst.github.io/files/matlab第七讲.pdf) 
 
-## Other Topics
-
- [演讲文案.docx](https://starkerfirst.github.io/files/演讲文案.docx) 
-
- [英语演讲.pptx](https://starkerfirst.github.io/files/英语演讲.pptx) 
-
- [少年班学生话科大生活稿件.docx](https://starkerfirst.github.io/files/少年班学生话科大生活稿件.docx) 
-
- [形式与政策感想.pdf](https://starkerfirst.github.io/files/形式与政策感想.pdf) 
-
- [科学与社会研讨课终期报告.pptx](https://starkerfirst.github.io/files/科学与社会研讨课终期报告.pptx) 
-
- [C语言笔记Part1.docx](https://starkerfirst.github.io/files/C语言笔记Part1.docx) 
-
- [C语言笔记Part2.docx](https://starkerfirst.github.io/files/C语言笔记Part2.docx) 
