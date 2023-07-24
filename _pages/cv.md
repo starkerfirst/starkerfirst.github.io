@@ -17,8 +17,9 @@ Sept. 2020 – Current:  **University of Science and Technology of China (USTC)*
 
 # Honors and Awards
 
-| National Scholarship                                         | 2021 |
+| Item                                                         | Year |
 | ------------------------------------------------------------ | ---- |
+| National Scholarship                                         | 2021 |
 | First Prize of the 13th National College Students Mathematics Contest | 2021 |
 | Yan Jici Talent Class Scholarship                            | 2022 |
 | Qiangwei Great Ambition Scholarship                          | 2022 |
@@ -30,13 +31,11 @@ Sept. 2020 – Current:  **University of Science and Technology of China (USTC)*
 Oct. 2022 – Current: **Research Intern, IIIS, Tsinghua University** 
 
 * Advisor: **Prof. Mingyu Gao**
-
-* topic: **scalable spatial accelerator for dynamic neural networks with HW-SW co-design**
+* topic: **Scalable spatial accelerator for dynamic neural networks with HW-SW co-design**
 
 Jul. 2022 – Sept. 2022: **Intern, Polar Bear Tech** 
 
 * Advisor: **Huanbing Shi**
-
 * Member of the compiling research group
 * topic: **AI operator simulation && sampling case generation** 
 
@@ -61,5 +60,4 @@ Sept. 2022 – Feb. 2023: **Teaching Assistant, USTC**
 # Additional Files
 
 * [CV_yangbh](https://starkerfirst.github.io/files/CV_US.pdf)
-
 * [personal statement](https://starkerfirst.github.io/PS/)
