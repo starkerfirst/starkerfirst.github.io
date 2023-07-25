@@ -7,12 +7,11 @@ tags:
 ---
 
 Ready to read:
-* ViTCoD:  Accelerator for ViT model (HPCA 2023)
-* bisone:   Accelerator for edge computing (ASPLOS 2022)
-* fingers:   Accelerator for GNN (ASPLOS 2022)
+* ViTCoD (HPCA 2023)
+* M3ViT
 
 Plan to do:
 
 * Explore the embedded system (ARMv8)
 * Master Rust language
-* Lead a research project about transformer accelerator
+* Lead a research project about MoE
