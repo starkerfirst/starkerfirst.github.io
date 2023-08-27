@@ -1,14 +1,13 @@
 ---
-title: 'M3ViT'
-date: 2023-7-25
-permalink: /PaperReading/M3ViT
+title: 'Marionette'
+date: 2023-7-27
+permalink: /PaperReading/Marionette
 tags:
   - MoE
   - HW-SW co-design
-  - Source Code
 ---
 
-[NeurIPS'2022] M3ViT: Mixture-of-Experts Vision Transformer for Efficient Multi-task Learning with Model-Accelerator Co-design  
+[Micro'23] Towards Efficient Control Flow Handling in Spatial Architecture via Architecting the Control Flow Plane  
 
 
 
