@@ -12,17 +12,15 @@ redirect_from:
 
 *School of the Gifted Young, University of Science and Technology of China (USTC)*
 
-I am a senior undergraduate majoring in physical electronics. Now I am pursuing a B.S. degree in applied physics from USTC. My interests lie in **Computer Architecture and Chip Design**, especially for domain-specific accelerators of DNN workloads and in different application scenarios like LLM and self-driving.
+I am a senior undergraduate majoring in physical electronics. My interests are across the software and hardware stack, i.e. **Computer Architecture and Chip Design**, especially for domain-specific accelerators of DNN workloads and in different application scenarios like LLM and self-driving.
 
-Currently, I am working as a research intern under the supervision of Prof. Mingyu Gao at IIIS, Tsinghua University to explore design space and construct an evaluation simulator for dynamic neural networks using hardware and software co-design.
-
-Also, I am designing my own digital chip in TSMC 180nm process. If interested, you can find the details of this project in my repo.
+Currently, I am working as a research intern under the supervision of Prof. Fengbin Tu at ECE, HKUST to explore design space of innovative chip architecture targeting foundation models. 
 
 Welcome to my website!
 
 # News
 
-* My Next Stop -->  **HKUST**
+* My Next Stop -->  **ECE, HKUST**
 
 # Contact 
 

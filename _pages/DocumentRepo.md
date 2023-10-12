@@ -5,6 +5,10 @@ permalink: /DocumentRepo/
 author_profile: true
 ---
 
+## Reading Notes (UG)
+
+![PaperReading Link](https://starkerfirst.github.io/PaperReading/)
+
 ## Undergraduate Courses Files
 
  [原子物理复习.pdf](https://starkerfirst.github.io/files/原子物理复习.pdf) 

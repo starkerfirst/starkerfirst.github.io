@@ -12,8 +12,8 @@ main:
   - title: "Research"
     url: /Research/   
 
-  - title: "Notes"
-    url: /PaperReading/    
+  # - title: "Notes"
+  #   url: /PaperReading/    
 
   - title: "DocumentRepo"
     url: /DocumentRepo/
