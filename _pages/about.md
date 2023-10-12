@@ -14,7 +14,7 @@ redirect_from:
 
 I am a senior undergraduate majoring in physical electronics. My interests are across the software and hardware stack, i.e. **Computer Architecture and Chip Design**, especially for domain-specific accelerators of DNN workloads and in different application scenarios like LLM and self-driving.
 
-Currently, I am working as a research intern under the supervision of Prof. Fengbin Tu at ECE, HKUST to explore design space of innovative chip architecture targeting foundation models. 
+Currently, I am working as a research intern under the supervision of **Prof. Fengbin Tu** at ECE, HKUST to explore design space of innovative chip architecture targeting foundation models. 
 
 Welcome to my website!
 

@@ -7,7 +7,7 @@ author_profile: true
 
 ## Reading Notes (UG)
 
-![PaperReading Link](https://starkerfirst.github.io/PaperReading/)
+ [PaperReading Link](https://starkerfirst.github.io/PaperReading/)
 
 ## Undergraduate Courses Files
 
