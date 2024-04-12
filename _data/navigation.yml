@@ -9,8 +9,8 @@ main:
   - title: "Publications"
     url: /Publications/
 
-  - title: "Research"
-    url: /Research/   
+  # - title: "Research"
+    # url: /Research/   
 
   # - title: "Notes"
   #   url: /PaperReading/    

@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Bohan Yang"
+title                    : "Home"
 title_separator          : "-"
-name                     : &name "Bohan Yang"
+name                     : &name "Bohan Yang's Homepage"
 description              : &description "personal website"
 url                      : https://starkerfirst.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -81,12 +81,12 @@ analytics:
 # Site Author
 author:
   name             : "Bohan Yang"
-  avatar           : "avatar.jpeg"
-  bio              : "A junior undergraduate who is doing computer and chip architecture research."
+  avatar           : "pic.jpg"
+  bio              : "A senior undergraduate doing computer and chip architecture research."
   location         : "USTC, Hefei, China"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : 
+  googlescholar    : "https://scholar.google.com/citations?hl=zh-CN&user=sbIhXIwAAAAJ"
   email            : "yangbh [at] mail.ustc.edu.cn"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -103,7 +103,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : 
+  orcid            : "https://orcid.org/0009-0008-1015-0367"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
