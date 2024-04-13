@@ -11,7 +11,7 @@ redirect_from:
 
 *School of the Gifted Young, University of Science and Technology of China (USTC)*
 
-I am a senior undergraduate majoring in physical electronics. My research interests are **modern computer architecture, accelerators for emerging workloads, and software hardware co-design**.
+I am a senior undergraduate majoring in physical electronics. My research interests are **modern computer architecture, accelerators for emerging workloads, and software-hardware co-design**.
 
 Currently, I am working as a research intern (and a prospective Ph.D. student in 2024 Fall) under the supervision of [Prof. Fengbin Tu](https://fengbintu.github.io/) at **ECE, HKUST**.
 
@@ -19,9 +19,9 @@ Welcome to my website!
 
 # News
 
-* I am awarded **Hong Kong PhD Fellowship Scheme (HKPFS)** at HKUST from 2024 Fall!
-* My first survey paper regarding ISSCC 2024 research trends is published in **Journal of Semiconductors, Volume 45, Issue 4, April 2024**! 
-* My Next Stop -->  **ECE, HKUST**
+* [2024.04.12] I am awarded the **Hong Kong PhD Fellowship Scheme (HKPFS)** at HKUST beginning in 2024 Fall!
+* [2024.04.01] My first survey paper regarding ISSCC 2024 research trends is published in the **Journal of Semiconductors, Volume 45, Issue 4, April 2024**! 
+* [2023.12.22] My Next Stop -->  **ECE, HKUST**
 
 # Contact
 
