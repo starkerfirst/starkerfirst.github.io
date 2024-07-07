@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Bohan Yang"
   avatar           : "pic.jpg"
-  bio              : "A senior undergraduate doing computer and chip architecture research."
-  location         : "USTC, Hefei, China"
+  bio              : "Ph.D. student in ECE"
+  location         : "Hong Kong"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?hl=zh-CN&user=sbIhXIwAAAAJ"
-  email            : "yangbh [at] mail.ustc.edu.cn"
+  email            : "byangay [at] connect [dot] ust [dot] hk"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
