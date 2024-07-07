@@ -7,27 +7,27 @@ redirect_from:
   - /about/
   - /about.html
 ---
-### Senior Undergraduate
+### Ph.D. student
 
-*School of the Gifted Young, University of Science and Technology of China (USTC)*
+*Department of **Electronic and Computer Engineering***
 
-I am a senior undergraduate majoring in physical electronics. My research interests are **modern computer architecture, accelerators for emerging workloads, and software-hardware co-design**.
+*The Hong Kong University of Science and Technology (**HKUST**)*
 
-Currently, I am working as a research intern (and a prospective Ph.D. student in 2024 Fall) under the supervision of [Prof. Fengbin Tu](https://fengbintu.github.io/) at **ECE, HKUST**.
+Bohan Yang is currently a Ph.D. student in [ECE, HKUST](https://ece.hkust.edu.hk/) under the supervision of [Prof. Fengbin Tu](https://fengbintu.github.io/). His research interests include **modern computer architecture, accelerators for emerging workloads, and software-hardware co-design**. He received the degree of BSc in Applied Physics and BEng in Computer Science and Technology (Minor) from School of the Gifted Young, University of Science and Technology of China (USTC).
 
 Welcome to my website!
 
 # News
 
-* [2024.04.12] I am awarded the **Hong Kong PhD Fellowship Scheme (HKPFS)** at HKUST beginning in 2024 Fall!
-* [2024.04.01] My first survey paper regarding ISSCC 2024 research trends is published in the **Journal of Semiconductors, Volume 45, Issue 4, April 2024**! 
+* [2024.04.12] I am awarded the **Hong Kong PhD Fellowship Scheme (HKPFS)** at HKUST from 2024 Fall!
+* [2024.04.01] My first survey paper regarding ISSCC 2024 research trends is published in the **Journal of Semiconductors, Volume 45, Issue 4, April 2024**!
 * [2023.12.22] My Next Stop -->  **ECE, HKUST**
 
 # Contact
 
-* Email: yangbh [at] mail [dot] ustc [dot] edu [dot] cn
-* Address: University of Science and Technology of China,
-  No.96, JinZhai Road Baohe District, Hefei, Anhui, 230026, P.R.China.
+* Email: byangay [at] connect [dot] ust [dot] hk
+* Address: Room 3013, 3/F (Lift 35/36), CYT Building, The Hong Kong University of Science and Technology, Clear Water Bay, Kowloon, Hong Kong, China
 
-<br/><br/>
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=gRoUESTxlj4eEROAGh5ViX7GEPJ_6hJsZc-JDkHNPyM&cl=ffffff&w=a"></script>
+`<br/><br/>`
+
+<script type="text/javascript" id="clustrmaps" src="https://clustrmaps.com/map_v2.js?d=gRoUESTxlj4eEROAGh5ViX7GEPJ_6hJsZc-JDkHNPyM&cl=ffffff&w=a"></script>

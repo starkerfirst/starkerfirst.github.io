@@ -24,6 +24,8 @@ Sept. 2020 – Current:  **University of Science and Technology of China (USTC)*
 | Qiangwei Great Ambition Scholarship                                   | 2022 |
 | Alumni (Class of 1987) Innovation Scholarship                         | 2023 |
 | Qiangwei Dedication Scholarship                                       | 2023 |
+| Guanggu Scholarship                                                   | 2023 |
+| USTC Outstanding Graduate                                             | 2024 |
 
 # Research Experiences
 
