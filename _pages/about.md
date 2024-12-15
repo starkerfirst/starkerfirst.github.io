@@ -7,9 +7,8 @@ redirect_from:
   - /about/
   - /about.html
 ---
-### Ph.D. student
+### Ph.D. student @ ECE
 
-*Department of Electronic and Computer Engineering*
 *The Hong Kong University of Science and Technology (HKUST)*
 
 Bohan Yang is currently a Ph.D. student in [ECE, HKUST](https://ece.hkust.edu.hk/) under the supervision of [Prof. Fengbin Tu](https://fengbintu.github.io/). His research interests include **modern computer architecture, accelerators for emerging workloads, and software-hardware co-design**. He received the degree of BSc in Applied Physics and BEng in Computer Science and Technology (Minor) from School of the Gifted Young, University of Science and Technology of China (USTC).
