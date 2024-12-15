@@ -15,8 +15,8 @@ main:
   # - title: "Notes"
   #   url: /PaperReading/    
 
-  - title: "DocumentRepo"
-    url: /DocumentRepo/
+  # - title: "DocumentRepo"
+  #  url: /DocumentRepo/
     
   #- title: "Portfolio"
   #  url: /portfolio/
